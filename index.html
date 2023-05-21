@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" ng-app="MyFirstApp">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="controller.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Drag and drop in AngularJS</title>
 </head>
-<body>
-    
+<body ng-controller="FirstController">
+    <div >
+        <h2>Arrastra y suelta para ordenar la lista:</h2>
+        <div class="lista" ng-model="items">
+          <div ng-repeat="item in items" class="elemento" ng-mousedown="dragStart($event)" ng-mouseup="dragEnd($event)" ng-mousemove="drag($event)">
+            {{item}}
+          </div>
+        </div>
+    </div>
 </body>
 </html>

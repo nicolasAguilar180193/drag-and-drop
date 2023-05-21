@@ -10,7 +10,7 @@
     <title>Drag and drop in AngularJS</title>
 </head>
 <body ng-controller="FirstController">
-    <div >
+    <div class="main-container">
         <h2>Arrastra y suelta para ordenar la lista:</h2>
         <div class="lista" ng-model="items">
           <div ng-repeat="item in items" class="elemento" ng-mousedown="dragStart($event)" ng-mouseup="dragEnd($event)" ng-mousemove="drag($event)">
